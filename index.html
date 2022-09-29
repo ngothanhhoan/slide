@@ -1,82 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Thanh Hoàn</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="main">
-        <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">Slide</h2>
-            </div>
-
-            <div class="menu">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">NEW</a></li>
-                    <li><a href="#">DESIGN</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
-            </div>
-
-            <div class="search">
-                <input class="srch" type="search" name="" placeholder="Tìm kiếm ....">
-                <a href="#"> <button class="btn">Search</button></a>
-            </div>
-
-        </div> 
-
-        <div class="content">
-    <div class="slider">
-      <div class="slides">
-        <input type="radio" name="radio-btn" id="radio1">
-        <input type="radio" name="radio-btn" id="radio2">
-        <input type="radio" name="radio-btn" id="radio3">
-        <input type="radio" name="radio-btn" id="radio4">
-
-        <div class="slide first">
-          <img src="img/images1.jpg" alt="">
+      <div class="navbar">
+        <div class="icon">
+          <h2 class="logo">Slide</h2>
         </div>
-        <div class="slide">
-          <img src="img/images2.jpg" alt="">
+
+        <div class="menu">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">NEW</a></li>
+            <li><a href="#">DESIGN</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
         </div>
-        <div class="slide">
-          <img src="img/images3.jpg" alt="">
-        </div>
-        <div class="slide">
-          <img src="img/images4.jpg" alt="">
-        </div>
-        <div class="navigation-auto">
-          <div class="auto-btn1"></div>
-          <div class="auto-btn2"></div>
-          <div class="auto-btn3"></div>
-          <div class="auto-btn4"></div>
+
+        <div class="search">
+          <input
+            class="srch"
+            type="search"
+            name=""
+            placeholder="Tìm kiếm ...."
+          />
+          <a href="#"> <button class="btn">Search</button></a>
         </div>
       </div>
-      <div class="navigation-manual">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
-        <label for="radio4" class="manual-btn"></label>
-      </div>
-    </div>
 
-    <div class="form">
-        <h2>Thông tin</h2>
-        <input type="name" name="name" placeholder="Điền tên:">
-        <input type="name-2" name="" placeholder="">
-        <input type="name" name="name" placeholder="">
-        <input type="name-2" name="" placeholder="">
-        <button class="btnn"><a href="#">OK</a></button>
-    </div>
-        </div>
+      <div class="content">
+        <div id="main">
+          <div id="ads-background">
+            <div class="main__ads">
+              <a href="#"><img src="img/quangcao.png" alt="Quang_cao" /></a>
+              <div class="main__ads-close" onclick="myFunction()">
+                <i class="main__ads-close-btn fa-regular fa-circle-xmark">
+                  <div
+                    class="material-icons"
+                    style="font-size: 48px; color: white"
+                  >
+                    cancel
+                  </div>
+                </i>
+              </div>
+            </div>
           </div>
-  </div>
-  </div>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <script src="main.js"></script>8
-</body>
+
+          <div class="slider">
+            <div class="slides">
+              <input type="radio" name="radio-btn" id="radio1" />
+              <input type="radio" name="radio-btn" id="radio2" />
+              <input type="radio" name="radio-btn" id="radio3" />
+              <input type="radio" name="radio-btn" id="radio4" />
+
+              <div class="slide first">
+                <img src="img/images1.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/images2.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/images3.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/images4.jpg" alt="" />
+              </div>
+              <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+              </div>
+            </div>
+            <div class="navigation-manual">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+              <label for="radio3" class="manual-btn"></label>
+              <label for="radio4" class="manual-btn"></label>
+            </div>
+          </div>
+
+          <div class="form">
+            <h2>Thông tin</h2>
+            <input type="name" name="name" placeholder="Điền tên:" />
+            <input type="name-2" name="" placeholder="" />
+            <input type="name" name="name" placeholder="" />
+            <input type="name-2" name="" placeholder="" />
+            <button class="btnn"><a href="#">OK</a></button>
+          </div>
+          <div id="chat-popup">
+            <div class="open-button" onclick="openForm()" id="button-open">
+              <span>Chat</span>
+            </div>
+            <form action="" class="form-container" id="myForm">
+              <label for="msg"><b style="font-size: 18px">Message</b></label>
+              <textarea
+                placeholder="Type message..."
+                name="msg"
+                required
+              ></textarea>
+
+              <button type="submit" class="btn">Send</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
